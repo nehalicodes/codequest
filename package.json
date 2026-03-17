@@ -1,0 +1,31 @@
+{
+  "name": "codequest",
+  "version": "1.0.0",
+  "description": "CodeQuest - Full Stack Coding Platform with Angular and TypeScript",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run dev:frontend\" \"npm run dev:backend\"",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && npm run dev",
+    "build": "npm run build:frontend && npm run build:backend",
+    "build:frontend": "cd frontend && npm run build",
+    "build:backend": "cd backend && npm run build",
+    "start": "npm run build && concurrently \"npm run start:frontend\" \"npm run start:backend\"",
+    "start:frontend": "cd frontend && npm start",
+    "start:backend": "cd backend && npm start",
+    "install:all": "npm install && cd frontend && npm install && cd ../backend && npm install",
+    "lint": "concurrently \"cd frontend && npm run lint\" \"cd backend && npm run lint\""
+  },
+  "keywords": [
+    "coding",
+    "leetcode",
+    "problems",
+    "angular",
+    "typescript"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  }
+}
